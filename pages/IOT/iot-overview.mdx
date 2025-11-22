@@ -1,0 +1,13 @@
+--- 
+title: "IoT Module Overview" 
+--- 
+# IoT Module Overview 
+Azure has a module that connects the python code with Azure 
+'iot hub' is a special tool for this case
+The IoT Module receives data from the Data Generation Module and streams it to Azure IoT Hub. It handles device authentication and ensures real-time ingestion. 
+```python 
+from azure.iot.device import IoTHubDeviceClient 
+client = IoTHubDeviceClient.create_from_connection_string("your_connection_string") 
+client.send_message("Hello IoT Hub") 
+``` 
+

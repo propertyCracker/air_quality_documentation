@@ -1,0 +1,18 @@
+--- 
+title: "Drift Logic" 
+--- 
+# Drift Logic 
+The module applies hourly drift to sensor values to simulate realistic fluctuations. 
+```python 
+import random 
+def apply_hourly_drift(base, is_daytime): 
+    if is_daytime: 
+        pct = 0.07 
+        return {k: base[k] + random.uniform(-base[k]*pct, base[k]*pct) for k in base} 
+    else: 
+        pct = 0.05 
+        return {k: base[k] - random.uniform(0, base[k]*pct) for k in base} 
+base = {"temperature": 28.0, "humidity": 50.0, "co2": 400} 
+state = apply_hourly_drift(base, is_daytime=True) 
+print(state) 
+``` 

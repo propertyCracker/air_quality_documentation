@@ -1,0 +1,7 @@
+{
+    "synapse-pipeline": "Synapse Pipeline",
+    "sql-pool": "SQL Dedicated Pool",
+    "storage-model": "Storage Model",
+    "etl-logic": "ETL / ELT Logic"
+  }
+  

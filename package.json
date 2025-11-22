@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+  "predeploy": "npm run build && npm run export",
     "start": "next start"
   },
   "repository": {

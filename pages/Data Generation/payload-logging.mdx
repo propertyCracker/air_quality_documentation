@@ -1,0 +1,21 @@
+--- 
+title: "Payload & Logging" 
+--- 
+Each device sends a JSON payload including temperature, humidity, CO2, NO2, PM2.5, PM10, timestamp, and day/night period. 
+```python 
+from datetime import datetime 
+import json 
+payload = { 
+"deviceId": "device_1", 
+"region": "Cairo", 
+"timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 
+"temperature": "29.5 øC", 
+"humidity": "55 %", 
+"co2": "410 ppm", 
+"no2": "22 æg/m3", 
+"pm25": "14 æg/m3", 
+"pm10": "26 æg/m3", 
+"period": "day" 
+} 
+print(json.dumps(payload, ensure_ascii=False, indent=2)) 
+``` 

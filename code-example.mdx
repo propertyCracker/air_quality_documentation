@@ -1,0 +1,11 @@
+---
+title: 'Simulator Code Example'
+---
+# Simulator Code Example
+This is an example of the Python simulator script that generates air quality data.
+```python
+import json
+from datetime import datetime
+data = '{"temperature": 25, "humidity": 60, "timestamp": ""' + datetime.now().isoformat() + """"}'
+print(json.dumps(data))
+```

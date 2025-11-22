@@ -12,20 +12,9 @@ const config: DocsThemeConfig = {
     </>
   ),
   project: {
-    link: "https://github.com/shuding/nextra-docs-template",
+    link: "https://github.com/nhahub/NHA-115",
   },
-  chat: {
-    link: "https://www.youtube.com/@JBWEBDEVELOPER",
-    icon: (
-      <>
-        <img
-          style={{ width: "35px" }}
-          src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
-          alt=""
-        />
-      </>
-    ),
-  },
+  
   docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
   footer: {
     text: "Nextra Docs Template",

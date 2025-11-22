@@ -1,0 +1,10 @@
+# overview
+## data flow
+the python code generates data then syncronosly sends it to the iot hub in azure
+```python 
+from azure.iot.device import IoTHubDeviceClient 
+client = IoTHubDeviceClient.create_from_connection_string("your_connection_string") 
+client.send_message("Hello IoT Hub") 
+``` 
+## where data go?
+the next part is held in the synapse where the data gets ingested and analysis plays its role

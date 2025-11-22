@@ -1,0 +1,68 @@
+--- 
+title: "LLM Module Overview" 
+--- 
+# LLM Module Overview 
+Main Responsibilities of the LLM in Your System
+### **1. Understand User Queries**
+The LLM converts everyday language into structured intent.
+
+**Example:**
+```
+User: “Is the air getting worse this week?”
+LLM interprets:
+“Compare PM2.5 averages over last 7 days.”
+```
+### **2. Validate and Rewrite Queries**
+It reshapes unclear or incomplete questions into valid analytical queries.
+
+**Example:**
+```
+User asks: “Show me pollution.”
+LLM corrects it into:
+“Retrieve PM2.5, PM10, CO₂, and NO₂ readings for all regions (default timespan: last 24h).”
+```
+### **3. Generate Data-Retrieval Commands**
+The LLM may output:
+**SQL queries**
+
+-API calls
+
+-JSON responses
+
+-Filter conditions
+
+-Time range selection
+
+#### Example output:
+```SQL
+SELECT region, pm25, timestamp
+FROM air_quality
+WHERE timestamp >= DATEADD(hour, -24, GETDATE())
+ORDER BY pm25 DESC
+```
+### **4. Summarize Data in Human Language**
+The LLM converts complex data into readable insights.
+
+#### Example summary:
+```
+“PM2.5 levels in Giza increased by 18% in the last 6 hours.
+This indicates a moderate pollution rise, likely due to traffic density.”
+```
+### **5. Provide Recommendations and Warnings (Optional)**
+future version could:
+warn about dangerous pollution spikes
+suggest safe hours for outdoor activity
+advise industrial areas about emission trends
+#### **Why This Matters for Egypt**
+You explained your goal earlier:
+This project aims to help the Egyptian Ministry of Environment monitor air quality intelligently.
+Your LLM supports this by:
+```
+reducing manual monitoring effort
+
+making analysis faster
+
+giving non-technical staff powerful tools
+
+turning complex environmental data into instant insights
+```
