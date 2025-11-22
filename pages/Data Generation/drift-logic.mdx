@@ -16,3 +16,13 @@ base = {"temperature": 28.0, "humidity": 50.0, "co2": 400}
 state = apply_hourly_drift(base, is_daytime=True) 
 print(state) 
 ``` 
+
+# Day sun
+also the sun time is calculated in our drifting logic 
+
+```python
+def get_sun_times_for(date_obj, lat, lon, region_name=""):
+    loc = LocationInfo(name=region_name, region=region_name, timezone="Africa/Cairo", latitude=lat, longitude=lon)
+    s = sun(loc.observer, date=date_obj)
+    return {"sunrise": s["sunrise"], "sunset": s["sunset"]}
+```
