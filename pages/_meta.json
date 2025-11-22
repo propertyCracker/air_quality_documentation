@@ -2,8 +2,9 @@
   "Home": "Home",
   "Overview": "Overview",
   "Architecture": "Architecture",
-  "Data Engineering": "Data Engineering",
-  "Data Generation": "Data Generation",
+  "Data-engineering": "Data Engineering",
+  
+  "Data-generation":"Data Generation",
   "IOT": "IOT",
   "Analytics": "Analytics",
   "Streamlit": "Streamlit",

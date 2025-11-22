@@ -1,0 +1,31 @@
+---
+title: Data Generation
+slug: /data-generation
+---
+
+# Data Generation Module
+
+The **Data Generation Module** simulates realistic air quality readings across multiple regions in Egypt.  
+It is responsible for creating dynamic sensor data that mimics real-world environmental conditions, including:
+
+- Temperature  
+- Humidity  
+- CO₂  
+- NO₂  
+- PM2.5  
+- PM10  
+
+This data is streamed to **Azure IoT Hub** and stored locally in daily log files for historical analysis.
+
+---
+
+## 1. Devices & Regions
+
+Each simulated device is mapped to a region using devices.json and 
+egions.json.  
+The region defines:
+
+- Latitude and longitude  
+- Base readings for each pollutant  
+- Activity end hour activity
+
