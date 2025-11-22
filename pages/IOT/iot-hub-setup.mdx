@@ -1,1 +1,37 @@
-﻿
+﻿# To create an IOT-hub service
+
+**1-you should have an Azure subscription.**  
+**2-search on Azure for iot hub**  
+
+![search](C:\Users\Abdelrahman\Desktop\nextra_demo\nextjs-docs\public\search-iothub.png)  
+
+**select the default in everything then review and create**  
+
+#### IOT HUB
+**3-It should look like that after creation**  
+
+![main](C:\Users\Abdelrahman\Desktop\nextra_demo\nextjs-docs\public\IMG-20251122-WA0002.jpg)  
+
+#### Device create
+**4-from the left menu create a new device**  
+
+![main](C:\Users\Abdelrahman\Desktop\nextra_demo\nextjs-docs\public\IMG-20251122-WA0001.jpg)  
+
+**After creation you should take the link of the device and the token to send data**  
+
+#### Getting data
+**from python script to the iot hub device**  
+
+```python
+client = None
+if IoTHubDeviceClient:
+    try:
+        client = IoTHubDeviceClient.create_from_connection_string(conn_str)
+        print(f"[{deviceId}] Connected to IoT Hub.")
+    except Exception as e:
+        print(f"[{deviceId}] Warning: cannot connect to IoT Hub: {e}")
+else:
+    print(f"[{deviceId}] Running local-only (azure-iot-device not installed).")
+
+time.sleep(offset_seconds)
+```

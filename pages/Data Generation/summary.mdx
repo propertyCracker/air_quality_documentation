@@ -3,3 +3,17 @@ title: "Data Generation Summary"
 --- 
 # Summary 
 The Data Generation Module provides realistic, region-specific air quality data, forming the foundation for IoT, Analytics, LLM, and Streamlit modules. 
+
+```python
+client = None
+    if IoTHubDeviceClient:
+        try:
+            client = IoTHubDeviceClient.create_from_connection_string(conn_str)
+            print(f"[{deviceId}] Connected to IoT Hub.")
+        except Exception as e:
+            print(f"[{deviceId}] Warning: cannot connect to IoT Hub: {e}")
+    else:
+        print(f"[{deviceId}] Running local-only (azure-iot-device not installed).")
+
+    time.sleep(offset_seconds)
+```
