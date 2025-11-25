@@ -81,3 +81,27 @@ The `Air_Quality_Score_Percent` is a high-level, composite metric derived from a
 
 - Breakdown of average concentrations shows contribution to Gas Scores and Air Quality Percent.  
 - **Delta Region:** PM₁₀ and PM₂.₅ scores are **negative**, indicating thresholds are exceeded.
+---
+
+## 4. Streaming Analysis (Real-Time Alerting)
+
+Streaming analysis processes individual sensor data points as they arrive, providing **up-to-the-minute analysis** for immediate operational awareness, acting as an early warning system.  
+
+### Key Streaming Metrics
+
+#### Sliding Window Averages
+- Instead of calculating a single global average, the system compute
+#### Real-Time Gas Score
+- The **Gas Score** (Section 1) is recalculated with every new sensor data point using the most current sliding window average.  
+- This allows the dashboard's KPI cards to dynamically update.   
+#### Anomaly Detection
+- The system monitors the **rate of change** in pollutant concentration.  
+- A sudden spike in the **Gas Average** or rapid decline toward a negative **Gas Score** can trigger an anomaly flag, even if the absolute value has not yet crossed the official threshold.
+
+#### Immediate Status Mapping
+- The **Air_Quality_Level** (e.g., "Unhealthy," "Warning") is mapped and updated instantly based on the **Gas Score_real-time** of the most critical pollutant.  
+- Provides **immediate actionable status** for decision-makers.
+
+### System Goal
+- Minimize latency between environmental changes and their reflection in the dashboard's **Gas Scores** and **Air Quality Level alerts**.
+
