@@ -1,0 +1,83 @@
+---
+title: "Power BI"
+---
+
+# Connection
+Power BI can connect directly to **Azure Synapse** to read data from:
+
+- Dedicated SQL Pools  
+- Serverless SQL Pools  
+- Synapse Data Lake  
+
+---
+
+## Batch Analysis
+The historical data provided in the data lake allows us to perform various analyses.  
+
+- For example, we can calculate the **average temperature** in the Delta zone over a specific period.  
+- We can also identify trends, detect anomalies, and generate insights for decision-making.  
+
+![Batch Analysis](/Screenshot2025-11-25200551.png)
+
+---
+
+# Air Quality Analysis
+
+## 1. Gas Score
+
+**Definition:**
+
+- **Gas Average:** The average measured concentration of the pollutant (e.g., CO₂ in ppm, PM₁₀ in µg/m³).  
+- **Gas Threshold:** The corresponding health guideline or safety limit for that pollutant.  
+
+**Interpretation:**
+
+| Score Value   | Meaning                                        | Health Implication                     |
+|---------------|------------------------------------------------|---------------------------------------|
+| Close to 1.00 | The gas level is far below the safety limit. | Very safe / Best quality.             |
+| Near 0        | The gas level is approaching the safety limit. | Warning / Limit is about to be reached. |
+| 0.00          | The gas level has reached the safety limit.  | Unhealthy (Limit Reached).            |
+| Negative      | The gas level has exceeded the safety limit. | Unhealthy / Hazardous (Limit Exceeded). |
+
+---
+
+## 2. Air Quality Score Percent
+
+**Definition:**  
+The `Air_Quality_Score_Percent` is a high-level, composite metric derived from an aggregation or inverse scoring of individual Gas Scores to provide an overall regional air quality snapshot.  
+
+**Characteristics:**
+
+- **Metric Type:** Composite Score (Percent)  
+- **Purpose:** To rank regions based on overall air quality, with a higher percentage indicating better air quality.  
+
+**Key Findings (from Dashboard):**
+
+- Significant variation exists across regions.  
+- **North Coast:** Highest scores → best air quality.  
+- **Greater Cairo:** Lowest scores → worst air quality.  
+- Scores trend downward from coastal to highly populated metropolitan areas.  
+
+**Air Quality Level Mapping:**
+
+- A score of **43%** corresponds to an **Unhealthy Air_Quality_Level**.
+
+![Air Quality Score Percent](/Screenshot2025-11-25200606.png)
+
+---
+
+## 3. Average Gas Concentrations
+
+**Tracked Pollutants (Global Average from Dashboard):**
+
+| Pollutant                   | Unit of Measure | Global Average |
+|------------------------------|----------------|----------------|
+| Carbon Dioxide (CO₂)         | ppm            | 355.22         |
+| Nitrogen Dioxide (NO₂)       | µg/m³          | 21.56          |
+| Particulate Matter (PM₁₀)    | µg/m³          | 45.61          |
+| Fine Particulate Matter (PM₂.₅)| µg/m³        | 22.32          |
+
+**Regional Insights:**
+
+- Breakdown of average concentrations shows contribution to Gas Scores and Air Quality Percent.  
+- **Delta Region:** PM₁₀ and PM₂.₅ scores are **negative**, indicating thresholds are exceeded.

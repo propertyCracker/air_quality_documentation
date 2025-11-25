@@ -1,13 +1,10 @@
 {
   "Home": "Home",
   "Overview": "Overview",
-  "Architecture": "Architecture",
   "Data-engineering": "Data Engineering",
-  
   "Data-generation":"Data Generation",
   "IOT": "IOT",
   "Analytics": "Analytics",
-  "Streamlit": "Streamlit",
   "LLM": "LLM" 
   
 }

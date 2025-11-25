@@ -1,6 +1,6 @@
 {
-    "batch-analysis": "Batch Analysis",
-    "streaming-analysis": "Streaming Analysis",
-    "kpis": "Key Metrics"
-  }
+    "azure_analytics": "Azure Analysitcs",
+    "powerbi_main": "Power BI"
+
+}
   

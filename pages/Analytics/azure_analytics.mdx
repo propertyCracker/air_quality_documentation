@@ -1,0 +1,13 @@
+--- 
+title: "Azure Analytics" 
+--- 
+# Data Processing & Storage
+We use Azure Synapse Analytics because it acts as the central data processing engine for 
+the air quality monitoring system.
+It ingests data from IoT Hub, stores it in a scalable SQL pool, applies
+ETL transformations, and prepares analytical tables.
+Power BI then connects to Synapse to visualize the cleaned and aggregated data.
+Synapse enables both batch and streaming analytics, making it essential for
+handling continuous IoT sensor data before sending it to Power BI dashboards.
+![analytics](/IMG-20251122-WA0004.jpg)
+
