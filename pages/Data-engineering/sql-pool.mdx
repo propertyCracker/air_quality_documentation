@@ -2,3 +2,19 @@
 **in synapse sql queries are supported for free but for  
 using it for streaming we should create a dedicated sql pool**
 ![sql](/IMG-20251122-WA0005.jpg)
+
+---
+## Table creation
+to save the data we should create a table in our database
+```sql
+CREATE TABLE dbo.IoT_AirQuality (
+    region NVARCHAR(50),
+    timestamp DATETIME,
+    temperature NVARCHAR(20),
+    humidity NVARCHAR(20),
+    co2 NVARCHAR(20),
+    no2 NVARCHAR(20),
+    pm25 NVARCHAR(20),
+    pm10 NVARCHAR(20)
+);
+```
