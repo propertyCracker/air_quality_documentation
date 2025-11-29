@@ -6,7 +6,7 @@ const config: DocsThemeConfig = {
     <>
       <img
         style={{ width: "80px" }}
-        src="https://logowik.com/content/uploads/images/nextjs2106.logowik.com.webp"
+        src="/proAr.png"
         alt=""
       />
     </>
